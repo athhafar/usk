@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="51be9334-b948-4c2b-b000-9bb21c72a619">
+	<property name="ireport.zoom" value="2.8531167061100033"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="43"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tb_petugas.`id_petugas` AS tb_petugas_id_petugas,
+     tb_petugas.`nama_petugas` AS tb_petugas_nama_petugas,
+     tb_petugas.`username` AS tb_petugas_username,
+     tb_petugas.`password` AS tb_petugas_password,
+     tb_petugas.`id_level` AS tb_petugas_id_level
+FROM
+     `tb_petugas` tb_petugas]]>
+	</queryString>
+	<field name="tb_petugas_nama_petugas" class="java.lang.String"/>
+	<field name="tb_petugas_username" class="java.lang.String"/>
+	<field name="tb_petugas_id_level" class="java.lang.Integer"/>
+	<group name="tb_petugas_nama_petugas">
+		<groupExpression><![CDATA[$F{tb_petugas_nama_petugas}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement uuid="1607a63d-08d2-4474-8f66-34dcbf5d8a80" mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[NAMA PETUGAS]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="56170caa-e9a3-4d79-95b1-62abc6e7dc83" mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="20" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tb_petugas_nama_petugas}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="176ff522-fc1d-4154-8855-61356ba79ac0" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="tb_petugas_username">
+		<groupExpression><![CDATA[$F{tb_petugas_username}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement uuid="7784f257-46ed-4a0f-b33e-8a2181dbfbde" x="100" y="0" width="455" height="32" forecolor="#006699"/>
+					<textElement>
+						<font size="22" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tb_petugas_username}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="7ac7d1fe-54f6-4964-881f-fce2edbe1813" x="0" y="0" width="100" height="20" forecolor="#666666"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[tb_petugas_username]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="tb_petugas_id_level">
+		<groupExpression><![CDATA[$F{tb_petugas_id_level}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement uuid="f4068c68-0932-491e-9a77-2883423b6d73" x="100" y="0" width="455" height="32" forecolor="#006699"/>
+					<textElement>
+						<font size="20" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tb_petugas_id_level}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="8255fb7f-2197-4aee-a763-a52743abe016" x="0" y="0" width="100" height="20" forecolor="#666666"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[tb_petugas_id_level]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="216c9cac-ca1b-4648-a137-b1f55be87c05" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="c335381e-0c9e-4a8b-ad06-83f340b03c8a" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="7d63097c-a804-4975-a25f-1686af50bf1a" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="8200068e-57f0-43ed-b427-d31bef357280" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="f4a54c61-ab6b-4e43-9041-af16830821c3" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="afe30524-a07f-411c-935a-7a18e2b8eeff" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="471f876e-4b4b-44ce-9db8-861a92438c52" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="acec3a62-b828-43f9-961f-a315aba820b8" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
